@@ -1,0 +1,119 @@
+:root {
+    --fc-black: #000;
+    --fc-white: #FFF;
+    --fc-simple-text: #34355B;
+    --bg-orange: #FF9500;
+    --bg-light-blue: #E4EDF1;
+
+    --ff-dm-sans: 'DM Sans', sans-serif;
+    --ff-montserrat: 'Montserrat', sans-serif;
+    --ff-dancing-script: 'Dancing Script', cursive;
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(45deg, #190361 0%, #B0F 100%);
+    display: grid;
+    place-items: center;
+    font-size: 1.6rem;
+    animation: gradient 10s ease infinite;
+    background-size: 200% 200%;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+main {
+    text-align: center;
+    border-radius: .5rem;
+    background: #FFF;
+    box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, 0.80);
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+    display: grid;
+    place-items: center;
+    width: 42.8rem;
+}
+
+.hide {
+    display: none;
+}
+
+h1, h2 {
+    color: var(--fc-simple-text);
+    font: 2.4rem var(--ff-montserrat);
+}
+
+p {
+    color: var(--fc-simple-text);
+    font: 1.5rem var(--ff-dm-sans);
+    padding-block: 1.4rem 2rem;
+}
+
+button {
+    border: none;
+    background: transparent;
+}
+
+.screen1 img:hover {
+    cursor: pointer;
+    animation: shakeCookie .1s infinite;
+}
+
+@keyframes shakeCookie {
+    from {
+        transform: rotate(-3deg);
+    }
+
+    to {
+        transform: rotate(3deg);
+    }
+}
+/* SCREEN 2 */
+.screen2 p {
+    padding: 1rem;
+    background: var(--bg-light-blue);
+    font: 2.4rem var(--ff-dancing-script);
+    color: var(--fc-black);
+    margin-block: 1.7rem;
+    animation: showLuckyText .5s ease-in;
+}
+
+.screen2 button {
+    display: block;
+    background: var(--bg-orange);
+    padding: 1.6rem;
+    color: var(--fc-white);
+    font-weight: 700;
+    font-family: var(--ff-dm-sans);
+    border-radius: .4rem;
+    margin: auto;
+    cursor: pointer;
+    margin-top: 1.7rem;
+}
+
+@keyframes showLuckyText {
+    from {
+        scale: 0;
+        margin-bottom: -10rem;
+    }
+    to {
+        scale: 1;
+        margin-bottom: 1.7rem;
+    }
+}
